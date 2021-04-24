@@ -10,7 +10,7 @@ namespace Durchschnittsrechner
     {
         static void Main(string[] args)
         {
-            Console.Title = "Durchschnittsrechner V2.0";
+            Console.Title = "Durchschnittsrechner V2.1";
             
             // Code
             int count;
