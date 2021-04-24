@@ -12,28 +12,6 @@ namespace Durchschnittsrechner
         {
             Console.Title = "Durchschnittsrechner V3.0";
 
-            Console.WriteLine("Please select a language:");
-            Console.WriteLine("1. Deutsch");
-            Console.WriteLine("2. English");
-
-            int lang = Convert.ToInt32(Console.ReadLine());
-
-            if (lang == 1)
-            {
-                Program.German();
-            } 
-            else
-            {
-                Program.English();
-            }
-
-        }
-
-        static void German()
-        {
-
-            Console.Clear();
-
             // Code
             int count;
 
@@ -101,83 +79,6 @@ namespace Durchschnittsrechner
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Drücke eine beliebige Taste, um den Rechner zu beenden.");
-
-            //Warte bevor schließen
-            Console.ReadKey();
-        }
-
-        static void English()
-        {
-
-            Console.Clear();
-
-            // Code
-            int count;
-
-            int countH;
-
-            int gewicht;
-
-            double result;
-
-            List<string> Noten = new List<string>();
-
-            List<string> Hauptfachnoten = new List<string>();
-
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("*German* Grade Calculator by Rafael Wickberg // GLifeDE");
-
-            Console.ForegroundColor = ConsoleColor.White;
-
-            Console.Write("How many main subjects are there?: ");
-            countH = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("What's the weight of the main subject? (e.g. it counts 2 times: 2): ");
-            gewicht = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("How many subsidiary subjects are there?: ");
-            count = Convert.ToInt32(Console.ReadLine());
-
-            Console.ForegroundColor = ConsoleColor.Cyan;
-
-            for (int i = 0; i < countH; i++)
-            {
-                Console.Write("Enter a main subject grade: ");
-                Hauptfachnoten.Add(Console.ReadLine());
-            }
-
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-
-            for (int i = 0; i < count; i++)
-            {
-                Console.Write("Enter a subsidiary subject grade: ");
-                Noten.Add(Console.ReadLine());
-            }
-
-            double total = Noten.Sum(x => Convert.ToDouble(x));
-
-            double totalH = Hauptfachnoten.Sum(x => Convert.ToDouble(x));
-
-
-
-            result = (((totalH * gewicht) + total) / (count + (countH * 2)));
-
-            Console.ForegroundColor = ConsoleColor.Red;
-
-            Console.WriteLine("The average is " + Math.Round(result, 2));
-
-            if (result >= 3)
-            {
-                Console.WriteLine("It will be better next time!");
-            }
-            else
-            {
-                Console.WriteLine("Very good, keep it up!");
-            }
-
-            Console.WriteLine(" ");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Press any key to exit the calculator.");
 
             //Warte bevor schließen
             Console.ReadKey();
