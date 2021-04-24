@@ -17,6 +17,8 @@ namespace Durchschnittsrechner
 
             int countH;
 
+            int gewicht;
+
             double result;
 
             List<string> Noten = new List<string>();
@@ -30,6 +32,9 @@ namespace Durchschnittsrechner
 
             Console.Write("Wie viele Hauptfächer gibt es?: ");
             countH = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Welche Gewichtung haben die Hauptfachnoten? (Bsp. 2-fach: 2): ");
+            gewicht = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Wie viele Nebenfächer gibt es?: ");
             count = Convert.ToInt32(Console.ReadLine());
@@ -56,7 +61,7 @@ namespace Durchschnittsrechner
 
             
 
-            result = (((totalH * 2) + total) / (count+(countH*2)));
+            result = (((totalH * gewicht) + total) / (count+(countH*2)));
 
             Console.ForegroundColor = ConsoleColor.Red;
 
@@ -70,7 +75,10 @@ namespace Durchschnittsrechner
             {
                 Console.WriteLine("Sehr gut, weiter so!");
             }
-         
+
+            Console.WriteLine(" ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Drücke eine Taste, um den Rechner zu verlassen.");
 
             //Warte bevor schließen
             Console.ReadKey();
