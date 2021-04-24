@@ -78,7 +78,7 @@ namespace Durchschnittsrechner
 
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Drücke eine Taste, um den Rechner zu beenden.");
+            Console.WriteLine("Drücke eine beliebige Taste, um den Rechner zu beenden.");
 
             //Warte bevor schließen
             Console.ReadKey();
