@@ -14,27 +14,34 @@ namespace Durchschnittsrechner
 
             Program.Programm();
 
+            ConsoleKeyInfo input;
+
             string decission = Console.ReadLine();
 
-            switch (decission)
+            do
             {
-                case "ja":
-                    Console.Clear();
-                    Program.Programm();
-                    break;
-                case "Ja":
-                    Console.Clear();
-                    Program.Programm();
-                    break;
-                case "JA":
-                    Console.Clear();
-                    Program.Programm();
-                    break;
-                case "jA":
-                    Console.Clear();
-                    Program.Programm();
-                    break;
-            }
+                switch (decission)
+                {
+                    case "ja":
+                        Console.Clear();
+                        Program.Programm();
+                        break;
+                    case "Ja":
+                        Console.Clear();
+                        Program.Programm();
+                        break;
+                    case "JA":
+                        Console.Clear();
+                        Program.Programm();
+                        break;
+                    case "jA":
+                        Console.Clear();
+                        Program.Programm();
+                        break;
+                }
+                input = Console.ReadKey();
+            } while (input.Key != ConsoleKey.Enter);
+            
 
         }
         static void Programm()
