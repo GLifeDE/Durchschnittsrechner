@@ -16,30 +16,14 @@ namespace Durchschnittsrechner
 
             ConsoleKeyInfo input;
 
-            string decission = Console.ReadLine();
-
             do
             {
-                switch (decission)
-                {
-                    case "ja":
-                        Console.Clear();
-                        Program.Programm();
-                        break;
-                    case "Ja":
-                        Console.Clear();
-                        Program.Programm();
-                        break;
-                    case "JA":
-                        Console.Clear();
-                        Program.Programm();
-                        break;
-                    case "jA":
-                        Console.Clear();
-                        Program.Programm();
-                        break;
-                }
                 input = Console.ReadKey();
+                if (input.Key != ConsoleKey.Enter)
+                {
+                    Console.Clear();
+                    Program.Programm();
+                }
             } while (input.Key != ConsoleKey.Enter);
             
 
@@ -112,7 +96,7 @@ namespace Durchschnittsrechner
 
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Um den Rechner neu zu starten, müssen sie *Ja* eintippen. Ansonsten Enter drücken.");
+            Console.WriteLine("Drücken sie alles *außer* Enter um den Rechner neu zu starten. Um ihn zu beenden drücken sie Enter.");
         }
     }
 }
