@@ -12,6 +12,33 @@ namespace Durchschnittsrechner
         {
             Console.Title = "Durchschnittsrechner V3.0";
 
+            Program.Programm();
+
+            string decission = Console.ReadLine();
+
+            switch (decission)
+            {
+                case "ja":
+                    Console.Clear();
+                    Program.Programm();
+                    break;
+                case "Ja":
+                    Console.Clear();
+                    Program.Programm();
+                    break;
+                case "JA":
+                    Console.Clear();
+                    Program.Programm();
+                    break;
+                case "jA":
+                    Console.Clear();
+                    Program.Programm();
+                    break;
+            }
+
+        }
+        static void Programm()
+        {
             // Code
             int count;
 
@@ -78,10 +105,7 @@ namespace Durchschnittsrechner
 
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Drücke eine beliebige Taste, um den Rechner zu beenden.");
-
-            //Warte bevor schließen
-            Console.ReadKey();
+            Console.WriteLine("Um den Rechner neu zu starten, müssen sie *Ja* eintippen. Ansonsten Enter drücken.");
         }
     }
 }
