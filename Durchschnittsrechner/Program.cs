@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Durchschnittsrechner
 {
@@ -10,7 +8,7 @@ namespace Durchschnittsrechner
     {
         static void Main(string[] args)
         {
-            Console.Title = "Durchschnittsrechner V3.2";
+            Console.Title = "Durchschnittsrechner V4.0";
 
             Program.Programm();
 
@@ -48,12 +46,21 @@ namespace Durchschnittsrechner
 
             Console.ForegroundColor = ConsoleColor.White;
 
-            Console.Write("Wie viele Hauptfächer gibt es? (type c to change language): ");
+            Console.WriteLine(" ");
+            Console.WriteLine("Drücke A um in den Einreichungsnoten-Modus zu betreten");
+            Console.WriteLine("Type C to change the language into english");
+            Console.WriteLine(" ");
+            Console.Write("Wie viele Hauptfächer gibt es?: ");
             var temp = Console.ReadLine();
 
             if (temp == "c")
             {
                 Program.English();
+                return;
+            }
+            else if (temp == "a")
+            {
+                Program.einreichnoten();
                 return;
             }
 
@@ -179,6 +186,134 @@ namespace Durchschnittsrechner
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Press everything *except* Enter to restart the calculator. To exit, press Enter.");
+        }
+
+        static void einreichnoten()
+        {
+            Console.Clear();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            Console.WriteLine("Wähle das zutreffende aus (1,2,3)");
+            Console.WriteLine();
+
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.WriteLine("1. Mit mündlicher Prüfung (50% Einreichung, 25% Mündlich, 25% Schriftlich)");
+            Console.WriteLine("2. Ohne mündlicher Prüfung (50% Einreichung, 50% Schriftlich)");
+            Console.WriteLine("3. Selbst die Prozente bestimmen");
+
+            var bestimmen = Console.ReadLine();
+
+            if (bestimmen == "1")
+            {
+                Program.Müpr();
+                return;
+            }
+            else if (bestimmen == "2")
+            {
+                Program.Ohmüpr();
+                return;
+            }
+            else if (bestimmen == "3")
+            {
+                Program.Sebe();
+                return;
+            }
+            else
+            {
+                System.Environment.Exit(1);
+            }
+        }
+
+        static void Müpr()
+        {
+            Console.Clear();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            Console.Write("Gebe deine Einreichungsnote ein: ");
+            double einreichungsnote1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            Console.Write("Gebe die Note der mündlichen Prüfung ein: ");
+            double müprnote = Convert.ToDouble(Console.ReadLine());
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+
+            Console.Write("Gebe die Note der schriftlichen Prüfung ein: ");
+            double schrftlchnote1 = Convert.ToDouble(Console.ReadLine());
+
+            double müpr = müprnote * 0.25 + schrftlchnote1 * 0.25 + einreichungsnote1 * 0.5;
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            Console.WriteLine(" ");
+
+            Console.WriteLine("Die Endnote beträgt " + müpr);
+            Console.WriteLine(" ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Drücken sie alles *außer* Enter um den Rechner neu zu starten. Um ihn zu beenden drücken sie Enter.");
+        }
+
+        static void Ohmüpr()
+        {
+            Console.Clear();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            Console.Write("Gebe deine Einreichungsnote ein: ");
+            double einreichungsnote2 = Convert.ToDouble(Console.ReadLine());
+
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            Console.Write("Gebe die Note der schriftlichen Prüfung ein: ");
+            double schrftlchnote2 = Convert.ToDouble(Console.ReadLine());
+
+            double ohmüpr = einreichungsnote2 * 0.5 + schrftlchnote2 * 0.5;
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            Console.WriteLine(" ");
+
+            Console.WriteLine("Die Endnote beträgt " + ohmüpr);
+            Console.WriteLine(" ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Drücken sie alles *außer* Enter um den Rechner neu zu starten. Um ihn zu beenden drücken sie Enter.");
+        }
+
+        static void Sebe()
+        {
+            Console.Clear();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            Console.Write("Gebe deine Einreichungsnote ein: ");
+            double einreichungsnote = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Wie viel Prozent zählt die Einreichungsnote? (z.b 25): ");
+            double einreichungsnoteprozent = Convert.ToDouble(Console.ReadLine());
+
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            Console.Write("Gebe die Note deiner Prüfung ein: ");
+            double prüfungsnote = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Wie viel Prozent zählt die Prüfungsnote? (z.b 25): ");
+            double prüfungsnoteprozent = Convert.ToDouble(Console.ReadLine());
+
+            double sebe = einreichungsnote * (einreichungsnoteprozent / 100) + prüfungsnote * (prüfungsnoteprozent / 100);
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+
+            Console.WriteLine(" ");
+
+            Console.WriteLine("Die Endnote beträgt " + sebe);
+            Console.WriteLine(" ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Drücken sie alles *außer* Enter um den Rechner neu zu starten. Um ihn zu beenden drücken sie Enter.");
         }
     }
 }
