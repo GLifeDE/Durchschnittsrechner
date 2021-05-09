@@ -8,7 +8,7 @@ namespace Durchschnittsrechner
     {
         static void Main(string[] args)
         {
-            Console.Title = "Durchschnittsrechner V4.0";
+            Console.Title = "Durchschnittsrechner V4.0.1";
 
             Program.Programm();
 
@@ -53,12 +53,12 @@ namespace Durchschnittsrechner
             Console.Write("Wie viele Hauptfächer gibt es?: ");
             var temp = Console.ReadLine();
 
-            if (temp == "c")
+            if (temp == "c" || temp == "C")
             {
                 Program.English();
                 return;
             }
-            else if (temp == "a")
+            else if (temp == "a" || temp == "A")
             {
                 Program.einreichnoten();
                 return;
