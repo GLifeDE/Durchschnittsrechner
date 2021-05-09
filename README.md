@@ -1,7 +1,14 @@
 # Durchschnittsrechner
 Das ist ein kleines Tool, um seinen Notendurchschnitt/Zeugnisschnitt berechnen zu lassen. Dieses funktioniert in der Windows Eingabeaufforderung (CMD) und das ermöglicht es, die Noten sehr schnell einzutragen!
 
+## Features
+- Du kannst deinen Zeugnissschnitt ausrechnen
+- Du kannst deine Einreichnote mit der Abschlussnote verrechnen, um die Endnote zu berechnen
+- It also supports the english language!
+
 ## Funktionsweise
+- Du kannst auswählen, welche Art von Rechner du verwenden möchtest
+
 - Du wirst gefragt, wie viele Hauptfächer miteinbezogen werden sollen
 - Du wirst gefragt, welche Gewichtungen die Hauptfachnoten haben
 - Du wirst gefragt, wie viele Nebenfächer miteinbezogen werden sollen
