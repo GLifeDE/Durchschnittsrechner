@@ -1,5 +1,5 @@
 # Durchschnittsrechner
-Das ist ein kleines Tool, um seinen Notendurchschnitt berechnen zu lassen. Dieses funktioniert in der Windows Eingabeaufforderung (CMD) und das ermöglicht es, die Noten sehr schnell einzutragen!
+Das ist ein kleines Tool, um seinen Notendurchschnitt/Zeugnisschnitt berechnen zu lassen. Dieses funktioniert in der Windows Eingabeaufforderung (CMD) und das ermöglicht es, die Noten sehr schnell einzutragen!
 
 ## Funktionsweise
 - Du wirst gefragt, wie viele Hauptfächer miteinbezogen werden sollen
