@@ -8,7 +8,7 @@ namespace Durchschnittsrechner
     {
         static void Main(string[] args)
         {
-            Console.Title = "Durchschnittsrechner V4.0.1";
+            Console.Title = "Durchschnittsrechner V4.1";
 
             Program.Programm();
 
@@ -17,7 +17,17 @@ namespace Durchschnittsrechner
             do
             {
                 input = Console.ReadKey();
-                if (input.Key != ConsoleKey.Enter)
+                if (input.Key == ConsoleKey.A)
+                {
+                    Console.Clear();
+                    Program.einreichnoten();
+                }
+                else if (input.Key == ConsoleKey.C)
+                {
+                    Console.Clear();
+                    Program.English();
+                }
+                else if (input.Key != ConsoleKey.Enter)
                 {
                     Console.Clear();
                     Program.Programm();
@@ -185,7 +195,9 @@ namespace Durchschnittsrechner
 
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Press everything *except* Enter to restart the calculator. To exit, press Enter.");
+            Console.WriteLine("Press C to restart the english version");
+            Console.WriteLine("Press everything exept C and Enter to get back");
+            Console.WriteLine("Press Enter to exit the calculator");
         }
 
         static void einreichnoten()
@@ -254,7 +266,9 @@ namespace Durchschnittsrechner
             Console.WriteLine("Die Endnote beträgt " + müpr);
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Drücken sie alles *außer* Enter um den Rechner neu zu starten. Um ihn zu beenden drücken sie Enter.");
+            Console.WriteLine("Drücke A um den Modus neu zu starten");
+            Console.WriteLine("Drücke alles *außer* Enter und R um zurück zu kehren");
+            Console.WriteLine("Drücke Enter um den Rechner zu beenden");
         }
 
         static void Ohmüpr()
@@ -280,7 +294,9 @@ namespace Durchschnittsrechner
             Console.WriteLine("Die Endnote beträgt " + ohmüpr);
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Drücken sie alles *außer* Enter um den Rechner neu zu starten. Um ihn zu beenden drücken sie Enter.");
+            Console.WriteLine("Drücke A um den Modus neu zu starten");
+            Console.WriteLine("Drücke alles *außer* Enter und R um zurück zu kehren");
+            Console.WriteLine("Drücke Enter um den Rechner zu beenden");
         }
 
         static void Sebe()
@@ -313,7 +329,9 @@ namespace Durchschnittsrechner
             Console.WriteLine("Die Endnote beträgt " + sebe);
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Drücken sie alles *außer* Enter um den Rechner neu zu starten. Um ihn zu beenden drücken sie Enter.");
+            Console.WriteLine("Drücke A um den Modus neu zu starten");
+            Console.WriteLine("Drücke alles *außer* Enter und R um zurück zu kehren");
+            Console.WriteLine("Drücke Enter um den Rechner zu beenden");
         }
     }
 }
