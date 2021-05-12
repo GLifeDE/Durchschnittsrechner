@@ -61,10 +61,16 @@
     <ManifestKeyFile>Durchschnittsrechner_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -83,6 +89,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Durchschnittsrechner_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Rechner-Icon.ico" />
