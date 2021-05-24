@@ -8,7 +8,7 @@ namespace Durchschnittsrechner
     {
         static void Main(string[] args)
         {
-            Console.Title = "Durchschnittsrechner V4.2";
+            Console.Title = "Durchschnittsrechner V4.2.1";
 
             Program.Programm();
 
@@ -310,6 +310,8 @@ namespace Durchschnittsrechner
             Console.WriteLine("Wie viele Noten sollen verrechnet werden?");
             int CountNoten = Convert.ToInt32(Console.ReadLine());
 
+            Console.Clear();
+
             for (int i = 0; i < CountNoten; i++)
             {
                 Console.Write("Gebe eine Note ein: ");
@@ -317,13 +319,13 @@ namespace Durchschnittsrechner
                 Console.Write("Wie viel Prozent zählt die Note?: ");
                 double tempp = Convert.ToDouble(Console.ReadLine());
 
+                Console.WriteLine(" ");
+
                 tempp = tempp / 10;
 
                 double tempr = temp * tempp;
 
                 result.Add(Convert.ToString(tempr));
-
-                Console.Clear();
             }
 
             double total = result.Sum(x => Convert.ToDouble(x));
