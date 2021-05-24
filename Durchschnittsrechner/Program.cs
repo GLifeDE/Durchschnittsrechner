@@ -303,30 +303,38 @@ namespace Durchschnittsrechner
         {
             Console.Clear();
 
+            List<string> result = new List<string>();
+
             Console.ForegroundColor = ConsoleColor.Cyan;
 
-            Console.Write("Gebe deine Einreichungsnote ein: ");
-            double einreichungsnote = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Wie viele Noten sollen verrechnet werden?");
+            int CountNoten = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Wie viel Prozent zählt die Einreichungsnote? (z.b 25): ");
-            double einreichungsnoteprozent = Convert.ToDouble(Console.ReadLine());
+            for (int i = 0; i < CountNoten; i++)
+            {
+                Console.Write("Gebe eine Note ein: ");
+                double temp = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Wie viel Prozent zählt die Note?: ");
+                double tempp = Convert.ToDouble(Console.ReadLine());
 
-            Console.ForegroundColor = ConsoleColor.Red;
+                tempp = tempp / 10;
 
-            Console.Write("Gebe die Note deiner Prüfung ein: ");
-            double prüfungsnote = Convert.ToDouble(Console.ReadLine());
+                double tempr = temp * tempp;
 
-            Console.Write("Wie viel Prozent zählt die Prüfungsnote? (z.b 25): ");
-            double prüfungsnoteprozent = Convert.ToDouble(Console.ReadLine());
+                result.Add(Convert.ToString(tempr));
 
-            double sebe = einreichungsnote * (einreichungsnoteprozent / 100) + prüfungsnote * (prüfungsnoteprozent / 100);
+                Console.Clear();
+            }
 
-            Console.ForegroundColor = ConsoleColor.Green;
+            double total = result.Sum(x => Convert.ToDouble(x));
 
+            double gesamt = total / 10;
 
             Console.WriteLine(" ");
 
-            Console.WriteLine("Die Endnote beträgt " + sebe);
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            Console.WriteLine("Die Endnote beträgt " + gesamt);
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Drücke A um den Modus neu zu starten");
