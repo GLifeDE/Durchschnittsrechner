@@ -334,7 +334,7 @@ namespace Durchschnittsrechner
 
             Console.ForegroundColor = ConsoleColor.Red;
 
-            Console.WriteLine("Die Endnote beträgt " + gesamt);
+            Console.WriteLine("Die Endnote beträgt " + Math.Round(gesamt, 2));
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Drücke A um den Modus neu zu starten");
