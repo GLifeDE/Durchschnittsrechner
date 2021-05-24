@@ -8,7 +8,7 @@ namespace Durchschnittsrechner
     {
         static void Main(string[] args)
         {
-            Console.Title = "Durchschnittsrechner V4.2.1";
+            Console.Title = "Durchschnittsrechner V4.2.2";
 
             Program.Programm();
 
