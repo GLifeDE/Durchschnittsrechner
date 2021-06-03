@@ -1,5 +1,8 @@
 # <img src="https://github.com/GLifeDE/Durchschnittsrechner/blob/master/Durchschnittsrechner/Rechner-Icon.png?raw=true" alt="Rechner-Icon" width="50" /> Durchschnittsrechner 
+
 Das ist ein kleines Tool, um seinen Notendurchschnitt/Zeugnisschnitt berechnen zu lassen. Dieses funktioniert in der Windows Eingabeaufforderung (CMD) und das ermöglicht es, die Noten sehr schnell einzutragen!
+
+[**Website**](https://durchschnittsrechner.vercel.app)
 
 ## Features
 - Du kannst deinen Zeugnissschnitt ausrechnen
