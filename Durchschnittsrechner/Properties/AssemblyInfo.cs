@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Durchschnittsrechner")]
-[assembly: AssemblyCopyright("Copyright GLifeDE ©  2020")]
+[assembly: AssemblyCopyright("Copyright GLifeDE ©  2020 - 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -21,7 +21,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-[assembly: Guid("7965023b-e340-46a0-a227-826b722a8a0c")]
+[assembly: Guid("41018689-681D-44B1-8614-F5DCE24441B4")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //
