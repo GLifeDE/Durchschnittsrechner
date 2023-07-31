@@ -2,7 +2,7 @@
 
 Das ist ein kleines Tool, um seinen Notendurchschnitt/Zeugnisschnitt berechnen zu lassen. Dieses funktioniert in der Windows Eingabeaufforderung (CMD) und das ermöglicht es, die Noten sehr schnell einzutragen!
 
-[**Website**](https://durchschnittsrechner.vercel.app)
+[**Website**](https://durchschnittsrechner.hinox.de)
 
 ## Features
 - Du kannst deinen Zeugnissschnitt ausrechnen
